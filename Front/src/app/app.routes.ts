@@ -12,6 +12,4 @@ export const routes: Routes = [
   { path: 'admin', component: AdminHomeComponent },
   { path: 'artist', component: ArtistHomeComponent },
   { path: 'listener', component: ListenerHomeComponent },
-  
-  { path: 'footer', component: FooterComponent },
 ];
