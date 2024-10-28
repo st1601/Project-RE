@@ -4,6 +4,7 @@ import { AdminHomeComponent } from './components/admin/admin-home/admin-home.com
 import { ArtistHomeComponent } from './components/artist/artist-home/artist-home.component';
 import { ListenerHomeComponent } from './components/user/listener-home/listener-home.component';
 import { LoginComponent } from './components/default/login/login.component';
+import { FooterComponent } from './components/default/footer/footer.component';
 
 const routes: Routes = [
   { path: ' ', redirectTo: '/login', pathMatch: 'full' },

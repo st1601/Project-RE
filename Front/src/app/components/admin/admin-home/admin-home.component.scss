@@ -1,0 +1,20 @@
+.contain {
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .content {
+    flex-grow: 1;
+  }
+  .single-homepage-slider {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+  }
+  .slider-img{
+    width: 2000px;
+    height: 700px;
+  }
+  

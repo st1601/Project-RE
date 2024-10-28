@@ -10,6 +10,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { NavAdminComponent } from './components/admin/nav-admin/nav-admin.component';
+import { FooterComponent } from './components/default/footer/footer.component';
 
 @NgModule({
     declarations: [
@@ -17,13 +19,16 @@ import { RouterModule } from '@angular/router';
         LoginComponent,
         AdminHomeComponent,
         ArtistHomeComponent,
-        ListenerHomeComponent
+        ListenerHomeComponent,
+        NavAdminComponent,
+        FooterComponent
       ],
       imports: [
         BrowserModule,
         FormsModule,
         AppRoutingModule, // Đảm bảo đã import AppRoutingModule
-        HttpClientModule
+        HttpClientModule,
+        NgModule,
       ],
       providers: [],
       bootstrap: [AppComponent]
