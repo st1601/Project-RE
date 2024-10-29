@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NavAdminComponent } from './components/admin/nav-admin/nav-admin.component';
 import { FooterComponent } from './components/default/footer/footer.component';
+import { RegisterComponent } from './components/default/register/register.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { FooterComponent } from './components/default/footer/footer.component';
         ArtistHomeComponent,
         ListenerHomeComponent,
         NavAdminComponent,
-        FooterComponent
+        FooterComponent,
+        RegisterComponent
       ],
       imports: [
         BrowserModule,

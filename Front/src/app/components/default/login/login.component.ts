@@ -26,11 +26,11 @@ export class LoginComponent {
 
         // Chuyển hướng theo loại tài khoản
         if (accountType === 'admin') {
-          this.router.navigate(['/admin-home']);
+          this.router.navigate(['/admin']);
         } else if (accountType === 'artist') {
-          this.router.navigate(['/artist-home']);
+          this.router.navigate(['/artist']);
         } else if (accountType === 'listener') {
-          this.router.navigate(['/listener-home']);
+          this.router.navigate(['/listener']);
         }
       },
       error => {

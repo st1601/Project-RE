@@ -4,13 +4,14 @@ import { ArtistHomeComponent } from './components/artist/artist-home/artist-home
 import { AdminHomeComponent } from './components/admin/admin-home/admin-home.component';
 import { LoginComponent } from './components/default/login/login.component';
 import { FooterComponent } from './components/default/footer/footer.component';
+import { RegisterComponent } from './components/default/register/register.component';
 
 
 export const routes: Routes = [
     { path: ' ', redirectTo: '/login', pathMatch: 'full' },
-    { path: '**', redirectTo: 'login' },
   { path: 'login', component: LoginComponent },
   { path: 'admin', component: AdminHomeComponent },
   { path: 'artist', component: ArtistHomeComponent },
   { path: 'listener', component: ListenerHomeComponent },
+  { path: 'register', component: RegisterComponent },
 ];
