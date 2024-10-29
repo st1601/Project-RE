@@ -7,18 +7,18 @@
   			</div>
   			<div class="form-container col-md-6 " >
   				<div class="">
-  					<form class="js-login-form pt-4 p-4">
+  					<form class="js-login-form pt-4 p-4" (ngSubmit)="login()">>
 
   						<h2 class="fx-animate-1">Login</h2>
   						<h5 class="fx-animate-3">Please enter your details</h5>
   						<div class="input-group mb-4 fx-animate-1" >
-						  <input type="text" class="form-control p-3" >
-						  <span class="input-group-text" id="basic-addon2"><i class="bi bi-envelope"></i></span>
+                            <input type="email" id="email" name="email" required>
+						  <span class="input-group-text" id="basic-addon2" ><i class="fa-solid fa-envelope"></i></span>
 						</div>
 
 						<div class="input-group mb-4 fx-animate-2">
 						  <input type="password" class="form-control p-3" >
-						  <span class="input-group-text" id="basic-addon2"><i class="bi bi-key"></i></span>
+						  <span class="input-group-text" id="basic-addon2"><i class="fa-solid fa-key"></i></span>
 						</div>
 
 						<div class="mb-4 fx-animate-3">
@@ -32,9 +32,9 @@
 						<div>
 							Follow us:
 							<div class="d-flex">
-								<div class="me-2 fx-animate-4"><a href="https://www.facebook.com/binh.son.1276487?mibextid=ZbWKwL"><i class="bi bi-facebook"></i></a></div>
-								<div class="me-2 fx-animate-5"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Fmrbin_guitar%3Figshid%3DNzZlODBkYWE4Ng%253D%253D%26fbclid%3DIwAR1ApJ7-wAhWS2iohs_qFY9ViyJ10KA53rD1wyKjrGR8nWA4wLkHFblGhyQ&h=AT3nSmOVk_r47PyYv-8sz4t8OvWmS0myunT2_-2lwgl4oAV-SnGgO0AmbSwz_OF-IhG97ie5ce8A6l2COtVHjo4p-scvPh8gcCnuAajTD6vgl3LxQYRcod048feBcK3AwpsThQ"><i class="h3 text-white bi bi-instagram"></i></a></div>
-								<div class="me-2 fx-animate-6"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.tiktok.com%2F%40chi1mke%3F_t%3D8gHbXbuLb2A%26_r%3D1%26fbclid%3DIwAR2ZHxb2CKRx8bnOpuIwaAwoqmnWks7gQ7AUE9iDe_qEWw2w81zP8YFTpCI&h=AT3nSmOVk_r47PyYv-8sz4t8OvWmS0myunT2_-2lwgl4oAV-SnGgO0AmbSwz_OF-IhG97ie5ce8A6l2COtVHjo4p-scvPh8gcCnuAajTD6vgl3LxQYRcod048feBcK3AwpsThQ"><i class="h3 text-white bi bi-tiktok"></i></a></div>
+								<div class="me-2 fx-animate-4"><a href="https://www.facebook.com/binh.son.1276487?mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a></div>
+								<div class="me-2 fx-animate-5"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Fmrbin_guitar%3Figshid%3DNzZlODBkYWE4Ng%253D%253D%26fbclid%3DIwAR1ApJ7-wAhWS2iohs_qFY9ViyJ10KA53rD1wyKjrGR8nWA4wLkHFblGhyQ&h=AT3nSmOVk_r47PyYv-8sz4t8OvWmS0myunT2_-2lwgl4oAV-SnGgO0AmbSwz_OF-IhG97ie5ce8A6l2COtVHjo4p-scvPh8gcCnuAajTD6vgl3LxQYRcod048feBcK3AwpsThQ"><i class="fa-brands fa-instagram"></i></a></div>
+								<div class="me-2 fx-animate-6"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.tiktok.com%2F%40chi1mke%3F_t%3D8gHbXbuLb2A%26_r%3D1%26fbclid%3DIwAR2ZHxb2CKRx8bnOpuIwaAwoqmnWks7gQ7AUE9iDe_qEWw2w81zP8YFTpCI&h=AT3nSmOVk_r47PyYv-8sz4t8OvWmS0myunT2_-2lwgl4oAV-SnGgO0AmbSwz_OF-IhG97ie5ce8A6l2COtVHjo4p-scvPh8gcCnuAajTD6vgl3LxQYRcod048feBcK3AwpsThQ"><i class="fa-brands fa-tiktok"></i></a></div>
 							</div>
 						</div>
   					</form>
