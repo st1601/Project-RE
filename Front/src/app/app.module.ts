@@ -27,7 +27,7 @@ import { FooterComponent } from './components/default/footer/footer.component';
         BrowserModule,
         FormsModule,
         AppRoutingModule, // Đảm bảo đã import AppRoutingModule
-        HttpClientModule
+        HttpClientModule,
         NgModule,
       ],
       providers: [],
