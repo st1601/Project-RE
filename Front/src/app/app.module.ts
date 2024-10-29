@@ -13,6 +13,7 @@ import { RouterModule } from '@angular/router';
 import { NavAdminComponent } from './components/admin/nav-admin/nav-admin.component';
 import { FooterComponent } from './components/default/footer/footer.component';
 
+
 @NgModule({
     declarations: [
         AppComponent,

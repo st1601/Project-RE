@@ -8,6 +8,7 @@ import { FooterComponent } from './components/default/footer/footer.component';
 
 export const routes: Routes = [
     { path: ' ', redirectTo: '/login', pathMatch: 'full' },
+    { path: '**', redirectTo: 'login' },
   { path: 'login', component: LoginComponent },
   { path: 'admin', component: AdminHomeComponent },
   { path: 'artist', component: ArtistHomeComponent },
