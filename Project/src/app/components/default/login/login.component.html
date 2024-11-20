@@ -1,1 +1,16 @@
-<p>login works!</p>
+<div class="login-container">
+    <h2>Đăng nhập</h2>
+    <form (ngSubmit)="login()">
+      <div>
+        <label>Email</label>
+        <input [(ngModel)]="email" name="email" type="email" required />
+      </div>
+      <div>
+        <label>Mật khẩu</label>
+        <input [(ngModel)]="password" name="password" type="password" required />
+      </div>
+      <button type="submit">Đăng nhập</button>
+      <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+    </form>
+  </div>
+  
