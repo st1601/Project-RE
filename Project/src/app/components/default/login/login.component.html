@@ -1,16 +1,75 @@
-<div class="login-container">
-    <h2>Đăng nhập</h2>
-    <form (ngSubmit)="login()">
-      <div>
-        <label>Email</label>
-        <input [(ngModel)]="email" name="email" type="email" required />
+<div class= "body">
+  <main class="text-white">
+    <h1 class="h2 text-center pt-3 pb-2"><i class="bi bi-soundwave"></i>Mr Bin - Music</h1>
+    <div class="content row mx-auto" >
+      <div class="img-container p-0 col-md-6 bg-warning" >
+        <img src="assets/img/home-login.jpg" >
       </div>
-      <div>
-        <label>Mật khẩu</label>
-        <input [(ngModel)]="password" name="password" type="password" required />
+      <div class="form-container col-md-6 " >
+        <div class="">
+          <form class="js-login-form pt-4 p-4" (ngSubmit)="onLogin()" #loginForm="ngForm">
+
+            <h2 class="fx-animate-1">Login</h2>
+            <h5 class="fx-animate-3">Please enter your details</h5>
+            <div class="input-group mb-4 fx-animate-1" >
+              <input
+                type="email"
+                id="email"
+                [(ngModel)]="email"
+                name="email"
+                required
+                class="form-control"
+                placeholder="Enter your email"
+                #emailInput="ngModel"
+              />
+              <div *ngIf="emailInput.invalid && emailInput.touched" class="error">
+                Email is required.
+              </div>
+            <span class="input-group-text" id="basic-addon2"><i class="bi bi-envelope"></i></span>
+          </div>
+
+          <div class="input-group mb-4 fx-animate-2">
+      <input
+        type="password"
+        id="password"
+        [(ngModel)]="password"
+        name="password"
+        required
+        class="form-control"
+        placeholder="Enter your password"
+        #passwordInput="ngModel"
+      />
+      <div *ngIf="passwordInput.invalid && passwordInput.touched" class="error">
+        Password is required.
       </div>
-      <button type="submit">Đăng nhập</button>
-      <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
-    </form>
-  </div>
-  
+            <span class="input-group-text" id="basic-addon2"><i class="bi bi-key"></i></span>
+          </div>
+
+          <div class="mb-4 fx-animate-3">
+            <button
+        type="submit"
+        class="btn btn-primary btn-block"
+        [disabled]="loginForm.invalid"
+      >
+        Login
+      </button>
+          </div>
+          <div class="mb-4 fx-animate-5">
+            <a routerLink="/reset">Forgot password?</a>
+          </div>
+          <hr>
+          <div>
+            Follow us:
+            <div class="d-flex">
+              <div class="me-2 fx-animate-4"><a href="https://www.facebook.com/binh.son.1276487?mibextid=ZbWKwL"><i class="h3 text-white bi bi-facebook"></i></a></div>
+              <div class="me-2 fx-animate-5"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Fmrbin_guitar%3Figshid%3DNzZlODBkYWE4Ng%253D%253D%26fbclid%3DIwAR1ApJ7-wAhWS2iohs_qFY9ViyJ10KA53rD1wyKjrGR8nWA4wLkHFblGhyQ&h=AT3nSmOVk_r47PyYv-8sz4t8OvWmS0myunT2_-2lwgl4oAV-SnGgO0AmbSwz_OF-IhG97ie5ce8A6l2COtVHjo4p-scvPh8gcCnuAajTD6vgl3LxQYRcod048feBcK3AwpsThQ"><i class="h3 text-white bi bi-instagram"></i></a></div>
+              <div class="me-2 fx-animate-6"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.tiktok.com%2F%40chi1mke%3F_t%3D8gHbXbuLb2A%26_r%3D1%26fbclid%3DIwAR2ZHxb2CKRx8bnOpuIwaAwoqmnWks7gQ7AUE9iDe_qEWw2w81zP8YFTpCI&h=AT3nSmOVk_r47PyYv-8sz4t8OvWmS0myunT2_-2lwgl4oAV-SnGgO0AmbSwz_OF-IhG97ie5ce8A6l2COtVHjo4p-scvPh8gcCnuAajTD6vgl3LxQYRcod048feBcK3AwpsThQ"><i class="h3 text-white bi bi-tiktok"></i></a></div>
+            </div>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+

@@ -9,6 +9,10 @@ import { LoginComponent } from './components/default/login/login.component';
 import { AdminComponent } from './components/admin/admin/admin.component';
 import { ArtistComponent } from './components/artist/artist/artist.component';
 import { ListenerComponent } from './components/listener/listener/listener.component';
+import { PasswordComponent } from './components/default/password/password.component';
+import { FooterComponent } from './components/default/footer/footer.component';
+import { NavbaradminComponent } from './components/admin/navbaradmin/navbaradmin.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -16,15 +20,21 @@ import { ListenerComponent } from './components/listener/listener/listener.compo
     LoginComponent,
     AdminComponent,
     ArtistComponent,
-    ListenerComponent
+    ListenerComponent,
+    PasswordComponent,
+    FooterComponent,
+    NavbaradminComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+

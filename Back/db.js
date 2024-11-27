@@ -1,16 +1,7 @@
-const express = require('express');
 const sql = require('mssql');
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
-const cors = require('cors');
-const app = express();
-const port = 3000;
-
-app.use(cors());
-app.use(express.json());
 
 // Cấu hình database
-const config = {
+const dbConfig = {
     user: 'SonU',
     password: 'Son160901@',
     server: '127.0.0.1',

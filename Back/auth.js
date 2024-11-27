@@ -38,4 +38,31 @@ router.post("/login", async (req, res) => {
     }
 });
 
+//Đổi mk
+router.post('/reset', async (req, res) => {
+    const { email, password } = req.body;
+  
+    try {
+      const pool = await poolPromise;
+      const result = await pool
+        .request()
+        .input('email', sql.NVarChar, email)
+        .query('SELECT * FROM Users WHERE email = @email');
+  
+      if (result.recordset.length === 0) {
+        return res.status(404).json({ message: 'Email not found' });
+      }
+  
+      await pool
+        .request()
+        .input('email', sql.NVarChar, email)
+        .input('password', sql.NVarChar, password)
+        .query('UPDATE Users SET password = @password WHERE email = @email');
+  
+      res.status(200).json({ message: 'Password reset successfully.' });
+    } catch (error) {
+      res.status(500).json({ message: 'Error resetting password.', error });
+    }
+  });
+
 module.exports = router;

@@ -9,15 +9,17 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  email = '';
-  password = '';
+  email: string = '';
+  password: string = '';
 
   constructor(private authService: AuthService, private router: Router) {}
 
-  login() {
+  onLogin() {
     this.authService.login(this.email, this.password).subscribe(
       (response: any) => {
         localStorage.setItem('token', response.token);
+
+        // Redirect based on account type
         switch (response.account_type) {
           case 'admin':
             this.router.navigate(['/admin-home']);
@@ -28,10 +30,12 @@ export class LoginComponent {
           case 'listener':
             this.router.navigate(['/listener-home']);
             break;
+          default:
+            alert('Unknown account type');
         }
       },
-      error => {
-        alert('Login failed!');
+      (error) => {
+        alert('Login failed: ' + error.error.message);
       }
     );
   }
