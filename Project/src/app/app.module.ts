@@ -13,6 +13,8 @@ import { PasswordComponent } from './components/default/password/password.compon
 import { FooterComponent } from './components/default/footer/footer.component';
 import { NavbaradminComponent } from './components/admin/navbaradmin/navbaradmin.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { UserlistComponent } from './components/admin/userlist/userlist.component';
+import { CreateuserComponent } from './components/admin/createuser/createuser.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ListenerComponent,
     PasswordComponent,
     FooterComponent,
-    NavbaradminComponent
+    NavbaradminComponent,
+    UserlistComponent,
+    CreateuserComponent
   ],
   imports: [
     BrowserModule,

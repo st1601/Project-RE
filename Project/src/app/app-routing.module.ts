@@ -7,6 +7,8 @@ import { ArtistComponent } from './components/artist/artist/artist.component';
 import { ListenerComponent } from './components/listener/listener/listener.component';
 import { PasswordComponent } from './components/default/password/password.component';
 import { FooterComponent } from './components/default/footer/footer.component';
+import { UserlistComponent } from './components/admin/userlist/userlist.component';
+import { CreateuserComponent } from './components/admin/createuser/createuser.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -16,6 +18,8 @@ const routes: Routes = [
   { path: 'listener', component: ListenerComponent, canActivate: [AuthGuard], data: { roles: ['listener'] } },
   { path: 'reset', component: PasswordComponent },
   { path: 'foot', component: FooterComponent },
+  { path: 'users', component: UserlistComponent },
+  { path: 'createuser', component: CreateuserComponent },
 ];
 
 

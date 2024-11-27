@@ -1,14 +1,10 @@
-.content {
-    padding: 2rem;
-    margin-top: 50px; /* Adjust to navbar height */
-  }
-.single-homepage-slider {
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    z-index: 1;
-  }
-  .slider-img{
-    width: 2000px;
-    height: 700px;
-  }
+.overlay-text {
+  position: absolute;
+  top: 85%; /* Canh giữa theo chiều dọc */
+  left: 40%; /* Canh giữa theo chiều ngang */
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Tạo bóng cho chữ */
+}

@@ -1,0 +1,121 @@
+<div class="create-user-container">
+    <h2>Create New User</h2>
+  
+    <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+      <div class="form-group">
+        <label for="userName">User Name</label>
+        <input
+          type="text"
+          id="userName"
+          name="userName"
+          class="form-control"
+          [(ngModel)]="user.user_name"
+          required
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          class="form-control"
+          [(ngModel)]="user.full_name"
+          required
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="form-control"
+          [(ngModel)]="user.email"
+          required
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="form-control"
+          [(ngModel)]="user.password"
+          required
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="dateOfBirth">Date of Birth</label>
+        <input
+          type="date"
+          id="dateOfBirth"
+          name="dateOfBirth"
+          class="form-control"
+          [(ngModel)]="user.dateOfBirth"
+          required
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input
+          type="text"
+          id="phone"
+          name="phone"
+          class="form-control"
+          [(ngModel)]="user.phone"
+          required
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input
+          type="text"
+          id="address"
+          name="address"
+          class="form-control"
+          [(ngModel)]="user.address"
+          required
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="accountType">Account Type</label>
+        <select id="accountType" name="accountType" class="form-control" [(ngModel)]="user.account_type" required>
+          <option value="admin">Admin</option>
+          <option value="artist">Artist</option>
+          <option value="listener">Listener</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="bio">Biography</label>
+        <textarea id="bio" name="bio" class="form-control" [(ngModel)]="user.bio"></textarea>
+      </div>
+  
+      <div class="form-group">
+        <label for="profilePicture">Profile Picture</label>
+        <input
+          type="file"
+          id="profilePicture"
+          name="profilePicture"
+          class="form-control"
+          (change)="onFileSelect($event)"
+        />
+      </div>
+  
+      <button type="submit" class="btn btn-submit" [disabled]="!userForm.valid">Create User</button>
+    </form>
+    <br>
+    <p class="help-text" >
+        <a routerLink="/users">Back to List</a>
+      </p>
+  </div>
+  

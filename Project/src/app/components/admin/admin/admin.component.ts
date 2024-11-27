@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent {
-
+  images = [
+    { src: 'assets/img/caAndersen.jpg', text: 'Overlay Text 1' },
+    { src: 'assets/img/caAndersen.jpg', text: 'Overlay Text 2' },
+    { src: 'assets/img/caAndersen.jpg', text: 'Overlay Text 3' }
+  ];
 }
