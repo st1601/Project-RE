@@ -1,0 +1,31 @@
+.songs-list {
+    padding: 20px;
+  }
+  
+  .song-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+  }
+  
+  .song-image {
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .song-info h3 {
+    margin: 0;
+  }
+  
+  audio {
+    margin-top: 10px;
+    width: 100%;
+  }
+  

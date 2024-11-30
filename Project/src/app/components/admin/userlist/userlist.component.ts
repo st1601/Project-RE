@@ -1,6 +1,6 @@
+import { UserService } from './../../../services/user.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-userlist',
@@ -13,14 +13,14 @@ export class UserlistComponent implements OnInit{
   selectedUserForEdit: any = null;
   selectedUserForDelete: any = null;
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private userService: UserService, private router: Router) {}
 
   ngOnInit(): void {
     this.loadUsers();
   }
 
   loadUsers(): void {
-    this.authService.getAllUsers().subscribe(
+    this.userService.getAllUsers().subscribe(
       (response) => {
         this.users = response;
       },
@@ -49,7 +49,7 @@ export class UserlistComponent implements OnInit{
   }
 
   onEditSubmit(): void {
-    this.authService.updateUser(this.selectedUserForEdit).subscribe(
+    this.userService.updateUser(this.selectedUserForEdit).subscribe(
       () => {
         alert('User updated successfully');
         this.closeEditPopup();
@@ -71,7 +71,7 @@ export class UserlistComponent implements OnInit{
 
   onDeleteUser(): void {
     if (this.selectedUserForDelete) {
-      this.authService.deleteUser(this.selectedUserForDelete.userID).subscribe(
+      this.userService.deleteUser(this.selectedUserForDelete.userID).subscribe(
         () => {
           alert('User deleted successfully');
           this.closeDeletePopup();

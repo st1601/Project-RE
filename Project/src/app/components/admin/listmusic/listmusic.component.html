@@ -1,0 +1,12 @@
+<app-navbaradmin></app-navbaradmin>
+<div class="music-list-container">
+    <h2>Music List</h2>
+    <div class="music-grid">
+      <div class="music-card" *ngFor="let song of songs">
+        <img [src]="song.song_image || 'assets/default-music.png'" alt="Song Image" class="song-image" />
+        <p><strong>Title:</strong> {{ song.title }}</p>
+        <p><strong>Genre:</strong> {{ song.genre }}</p>
+        <audio controls [src]="song.song_file" class="song-audio"></audio>
+      </div>
+    </div>
+  </div>

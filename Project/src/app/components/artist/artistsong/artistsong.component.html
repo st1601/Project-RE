@@ -1,0 +1,36 @@
+<app-navbarartist></app-navbarartist>
+<h2 style="text-align: center">Music List</h2>
+<button (click)="goToCreateMusic()">Create music</button> <br><br>
+<div style="margin-left: 30px;">
+<div *ngIf="songs.length > 0; else noSongs">
+    <ul>
+      <li *ngFor="let song of songs">
+        <p><strong>Title:</strong> {{ song.title }}</p>
+        <p><strong>Genre:</strong> {{ song.genre }}</p>
+        <p><strong>File:</strong> <audio controls><source [src]="song.song_file" type="audio/mpeg"></audio></p>
+        <img [src]="song.song_image" alt="Image" style="width: 100px; height: 100px;">
+        <hr>
+      </li>
+    </ul>
+  </div>
+  <ng-template #noSongs>
+    <p>There are no songs to display.</p>
+  </ng-template>
+ <!-- Delete Confirmation Popup -->
+<div id="deletePopup" class="popup-overlay" style="display: none;">
+    <div class="popup-content">
+      <h3>Are you sure you want to delete this song?</h3>
+      <p id="deleteSongTitle"></p>
+      <div class="popup-buttons">
+        <button id="confirmDelete" class="delete-button">Yes, Delete</button>
+        <button id="cancelDelete" class="cancel-button">Cancel</button>
+      </div>
+    </div>
+  </div>
+  <!-- Example song entry -->
+  <div *ngFor="let song of songs" class="song-entry">
+    <h4>{{ song.title }}</h4>
+    <p>Genre: {{ song.genre }}</p>
+    <button (click)="showDeletePopup(song.title, song.songID)">Delete</button>
+  </div>
+</div>

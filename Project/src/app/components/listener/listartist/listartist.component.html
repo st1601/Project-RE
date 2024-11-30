@@ -1,0 +1,12 @@
+<app-navbarlisten></app-navbarlisten>
+<div class="artist-list">
+    <h1>List of Artists</h1>
+    <div *ngFor="let artist of artists" class="artist-card" (click)="viewArtistSongs(artist.userID)">
+      <img [src]="artist.image || 'assets/default-avatar.png'" alt="{{ artist.full_name }}" class="artist-image" />
+      <div class="artist-info">
+        <h3>{{ artist.full_name }}</h3>
+      </div>
+    </div>
+  </div>
+  
+  

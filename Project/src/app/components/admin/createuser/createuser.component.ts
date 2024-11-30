@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from 'src/app/services/auth.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-createuser',
@@ -21,7 +21,7 @@ export class CreateuserComponent {
     profilePicture: null,
   };
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private userService: UserService, private router: Router) {}
 
   onFileSelect(event: any): void {
     const file = event.target.files[0];
@@ -35,7 +35,7 @@ export class CreateuserComponent {
   }
 
   onSubmit(): void {
-    this.authService.createUser(this.user).subscribe(
+    this.userService.createUser(this.user).subscribe(
       () => {
         alert('User created successfully');
         this.router.navigate(['/users']);

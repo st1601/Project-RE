@@ -15,6 +15,18 @@ import { NavbaradminComponent } from './components/admin/navbaradmin/navbaradmin
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UserlistComponent } from './components/admin/userlist/userlist.component';
 import { CreateuserComponent } from './components/admin/createuser/createuser.component';
+import { ListmusicComponent } from './components/admin/listmusic/listmusic.component';
+import { ListpaperComponent } from './components/admin/listpaper/listpaper.component';
+import { CreatepaperComponent } from './components/admin/createpaper/createpaper.component';
+import { NavbarartistComponent } from './components/artist/navbarartist/navbarartist.component';
+import { ArtistsongComponent } from './components/artist/artistsong/artistsong.component';
+import { CreatemusicComponent } from './components/artist/createmusic/createmusic.component';
+import { NavbarlistenComponent } from './components/listener/navbarlisten/navbarlisten.component';
+import { MusiclabraryComponent } from './components/listener/musiclabrary/musiclabrary.component';
+import { ReadpaperComponent } from './components/listener/readpaper/readpaper.component';
+import { FavouriteComponent } from './components/listener/favourite/favourite.component';
+import { ListartistComponent } from './components/listener/listartist/listartist.component';
+import { SongfilterComponent } from './components/listener/songfilter/songfilter.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +39,19 @@ import { CreateuserComponent } from './components/admin/createuser/createuser.co
     FooterComponent,
     NavbaradminComponent,
     UserlistComponent,
-    CreateuserComponent
+    CreateuserComponent,
+    ListmusicComponent,
+    ListpaperComponent,
+    CreatepaperComponent,
+    NavbarartistComponent,
+    ArtistsongComponent,
+    CreatemusicComponent,
+    NavbarlistenComponent,
+    MusiclabraryComponent,
+    ReadpaperComponent,
+    FavouriteComponent,
+    ListartistComponent,
+    SongfilterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,11 @@
+.overlay-text {
+    position: absolute;
+    top: 85%; /* Canh giữa theo chiều dọc */
+    left: 40%; /* Canh giữa theo chiều ngang */
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Tạo bóng cho chữ */
+  }
+  

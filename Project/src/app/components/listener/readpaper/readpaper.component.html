@@ -1,0 +1,24 @@
+<app-navbarlisten></app-navbarlisten>
+<div class="contain">
+        <h2 class="d-flex justify-content-center">Read paper</h2>
+    <div class="content" *ngFor="let paper of papers">
+      <div class="row justify-content-evenly">
+        
+        <br />
+        <div class="row" >
+          <br/>
+          <h3 style="margin-left: 250px;">{{ paper.song_name || paper.user_name }}</h3>
+          <br/>
+          <div class="col-3">
+            <img *ngIf="paper.paper_image" [src]="paper.paper_image" alt="Paper Image" class="paper-image" />
+              <span *ngIf="!paper.paper_image">No Image</span>
+          </div>
+          <div class="col-9">
+            <br>
+            <p>{{ paper.content }}</p>
+          </div>
+        </div>
+        <p>{{ paper.post_date | date: 'short' }}</p>
+        <br/>
+      </div></div>
+  </div>

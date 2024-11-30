@@ -1,0 +1,14 @@
+<app-navbarlisten></app-navbarlisten>
+<div class="songs-list">
+    <h1>Songs by Artist</h1>
+    <div *ngIf="songs.length === 0">No songs available for this artist.</div>
+    <div *ngFor="let song of songs" class="song-card">
+      <img [src]="song.song_image || 'assets/default-song.png'" alt="{{ song.title }}" class="song-image" />
+      <div class="song-info">
+        <h3>{{ song.title }}</h3>
+        <p>Genre: {{ song.genre }}</p>
+        <audio controls [src]="song.song_file"></audio>
+      </div>
+    </div>
+  </div>
+  

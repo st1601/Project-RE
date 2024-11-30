@@ -1,0 +1,16 @@
+<app-navbarlisten></app-navbarlisten>
+<div class="song-list">
+    <h1>All Songs</h1>
+    <div *ngFor="let song of songs" class="song-card">
+      <img [src]="song.song_image" alt="Song Image" class="song-image" />
+      <div class="song-details">
+        <h3>{{ song.title }}</h3>
+        <p>Genre: {{ song.genre }}</p>
+        <audio controls>
+          <source [src]="song.song_file" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <button (click)="addToFavourite(song.songID)">Add to Favourite</button>
+    </div>
+  </div>
