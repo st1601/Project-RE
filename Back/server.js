@@ -14,10 +14,10 @@ app.get('/', (req, res) => {
     res.send('Server hoạt động bình thường!');
 });
 
-app.use("/api/auths", authRoutes);
-app.use("/api/users", userRoutes);
-app.use("/api/musics", musicRoutes);
-app.use("/api/papers", paperRoutes);
+// app.use('/api/auths', authRoutes);
+// app.use('/api/users', userRoutes);
+// app.use('/api/musics', musicRoutes);
+// app.use('/api/papers', paperRoutes);
 
 app.use((req, res) => {
     res.status(404).send('Endpoint không tồn tại.');
