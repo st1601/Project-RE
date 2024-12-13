@@ -1,7 +1,6 @@
 const express = require('express');
 const { poolPromise } = require('./db');
 const router = express.Router();
-
 // Lấy danh sách tất cả người dùng
 router.get('/', async (req, res) => {
   try {
@@ -15,7 +14,6 @@ router.get('/', async (req, res) => {
 //API để tạo người dùng
 router.post('/', async (req, res) => {
     const { user_name, full_name, email, password, dateOfBirth, phone, address, account_type, bio, profilePicture } = req.body;
-  
     try {
       const pool = await poolPromise;
       await pool
@@ -39,12 +37,10 @@ router.post('/', async (req, res) => {
       res.status(500).json({ message: 'Failed to create user', error });
     }
   });
-
   // Update user
 router.put('/:userID', async (req, res) => {
   const { userID } = req.params;
   const { user_name, full_name, email, phone, address } = req.body;
-
   try {
     const pool = await poolPromise;
     await pool
@@ -65,11 +61,9 @@ router.put('/:userID', async (req, res) => {
     res.status(500).json({ message: 'Failed to update user', error });
   }
 });
-
 // Delete user
 router.delete('/:userID', async (req, res) => {
   const { userID } = req.params;
-
   try {
     const pool = await poolPromise;
     await pool
@@ -83,4 +77,5 @@ router.delete('/:userID', async (req, res) => {
     res.status(500).json({ message: 'Failed to delete user', error });
   }
 });
+
 module.exports = router;
